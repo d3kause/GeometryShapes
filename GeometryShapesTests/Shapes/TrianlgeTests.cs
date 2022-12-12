@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using GeometryShapes.Common;
 using GeometryShapes.Common.Exceptions;
 using GeometryShapes.Shapes;
+using GeometryShapesTests.Common;
 using Xunit;
 
 namespace GeometryShapesTests.Shapes;
 
 public class TrianlgeTests
 {
+    private static readonly IEqualityComparer<double> DoubleComparer = new DoubleNumberComparer();
+    
     [Fact]
     public void ShouldCreateCorrectTriangle()
     {
@@ -47,9 +51,9 @@ public class TrianlgeTests
         var triangle2 = new Triangle(0.01, 0.02, 0.015);
         var triangle3 = new Triangle(10000, 10000, 10000);
 
-        Assert.Equal(6.437196594791867, triangle1.GetArea(), 5);
-        Assert.Equal(0.000072618437741, triangle2.GetArea(), 5);
-        Assert.Equal(43301270.18922193, triangle3.GetArea(), 5);
+        Assert.Equal(6.437196594791867, triangle1.GetArea(), DoubleComparer);
+        Assert.Equal(0.000072618437741, triangle2.GetArea(), DoubleComparer);
+        Assert.Equal(43301270.18922193, triangle3.GetArea(), DoubleComparer);
     }
 
     [Fact]
