@@ -1,6 +1,5 @@
 ﻿using System;
 using GeometryShapes.Common;
-using GeometryShapes.Common.Contracts;
 using GeometryShapes.Common.Exceptions;
 using GeometryShapes.Shapes;
 using Xunit;

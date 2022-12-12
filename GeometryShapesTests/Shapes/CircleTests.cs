@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using GeometryShapes.Common.Contracts;
 using GeometryShapes.Shapes;
 using GeometryShapesTests.Common;
 using Xunit;
